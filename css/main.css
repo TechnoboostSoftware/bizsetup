@@ -1,0 +1,391 @@
+
+.service-details-bg {
+   /* background: url(../img/service-details-bg.png);*/
+    padding: 30px 0px;
+    min-height: 450px;
+    background-size: auto;
+    background-position: center bottom;
+    width: 100%;
+    background-repeat: no-repeat;
+    margin-top:63px
+}
+
+
+.half-circul {
+    background: url(../img/half-circul.png);
+    padding: 30px 0px;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 999 !important;
+    right: 0px;
+    width: 104px;
+    margin-top: -100px;
+    height: 220px;
+    background-size: cover;
+}
+
+.half-square{
+    background: url(../img/half-square.png);
+    padding: 30px 0px;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 999 !important;
+    left: 0px;
+    width: 107px;
+    margin-top: -280px;
+    height: 250px;
+    background-size: cover;
+}
+
+
+.text-withe {
+    color: #000 !important;
+}
+
+.service-banner-text-1 {
+    margin-top: 24%;
+}
+.llservice-banner-text-1 {
+    margin-top: 15%;
+}
+
+
+.service-banner-text-1 h1 {
+    font-weight: 900;
+    line-height: 65px;
+    font-size: 54px;
+    color: #000000!important;
+
+}
+
+/*.service-bg-btn.try-now-btn a {
+    border: 2px solid #000000;
+    padding: 8px 20px;
+    color: #000;
+}*/
+.service-banner-form {
+    background-color: #f5f5f5;
+    padding:30px 80px;
+    border-radius: 10px;
+}
+h3.form-title {
+    text-align: center;
+    font-weight: 900;
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #111111;
+}
+.service-banner-form .try-now-btn{
+    padding: 8px;
+    font-size: 18px;
+    background-color: #13B59C;
+    display: block;
+    color: #fff;
+    min-width: 132px;
+    margin: 20px auto 0px;
+    background: #13B59C 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 20px #00000029;
+    border-radius: 8px;
+}
+
+.serviece-title-2 {
+    font-size: 36px;
+    font-weight: 900;
+    margin-bottom: 15px;
+    text-align: left;
+    letter-spacing: 0px;
+    /* color: #13B59C; */
+    color: #000;
+    text-transform: capitalize;
+    opacity: 1;
+}
+.serviece-title-2-border{
+    width: 66px;
+    height: 4px;
+    background-color: #13B59C;
+    clear: both;
+    display: block;
+    border-radius: 30px;
+    margin-bottom: 30px;
+}
+p {
+    font-size: 14px;
+}
+.benefits-box h4 {
+    font-size: 24px;
+    margin: 15px 0px;
+}
+.benefits-box-p {
+    font-size: 14px;
+    color: #1C1C1CB3;
+}
+
+
+.title-img-key{
+    margin-bottom: 25px;
+}
+
+.key-registration-box {
+    display: flex;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+.key-registration-info {
+    margin-left: 30px;
+}
+.key-registration-box img {
+    position: absolute;    
+}
+
+.key-registration-box:hover .next-icon-hover{
+    display: block !important;
+}
+.key-registration-box:hover .next-icon{
+    display: none ;
+}
+
+
+.key-registration-box:hover {
+    color: #1C1C1CB3 !important;
+} 
+.key-registration-box:hover h4 {
+    color: #000 !important;
+}
+.key-registration-box:hover p {
+    color: #1C1C1CB3 !important;
+}
+.key-registration-box i {
+    font-size: 18px;
+    font-weight: 700;
+    margin-right: 20px;
+}
+.key-registration-info h4
+ {
+     font-size: 18px;
+     font-weight: 700;
+     color: #000;
+ }
+.registration-box ul li {
+    margin-bottom: 10px;
+}
+.compliance-info {
+    display: flex;
+}
+.compliance-box ul li {
+    margin-bottom: 10px;
+}
+.compliance-info h5 {
+    font-size: 15px;
+    color: #666;
+    margin: 0px;
+}
+.compliance-info h4 {
+    font-size: 14px;
+    color: #1C1C1CB3;
+    margin: 0px;
+}
+ .compliance-info i {
+    font-size: 20px;
+    color: #13b59c;
+    margin-right: 20px;
+}
+.title-small-text {
+    color: #13b59c;
+    margin-bottom: 20px;
+}
+
+.pay-grow-box {
+    border: 2px solid #ddd;
+    padding: 20px;
+    border-radius: 6px;
+    max-height: 600;
+    height: 100%;
+    transition:.6s ease;
+}
+.new-payment-scn{
+    height: auto;
+}
+.pay-grow-box:hover {
+    border: 2px solid #13b59c; 
+    box-shadow: rgb(127 137 161 / 30%) 0px 0px 30px;
+}
+
+
+.plan-name-price{
+    display: none !important;
+}
+
+.pay-grow-box:hover .plan-name-price{
+    display: block !important;
+    
+}
+.hide-on-hover:hover {
+    display: none !important;
+}
+
+.plan-name-price select {
+    border: 1px solid #13b59c;
+    max-width: 270px;
+    margin: 0px auto;
+}
+
+
+.pay-grow-box h4 {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 900;
+    color: #000000;
+    margin-bottom: 15px;
+    opacity: 0.6;
+}
+.pay-grow-box h2 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: #000000;
+}
+.btn.buy-now-btn-2 {
+    text-align: center;
+    display: block;
+    margin: 40px auto;
+    font-weight: 700;
+    color: #13b59c;
+    padding: 6px 10px;
+    min-width: 150px;
+    border: 2px solid #13b59c;
+    font-size: 16px; transition:0.6s ease;
+    border-radius: 4px;
+}
+
+.btn.buy-now-btn-2.active
+{
+    background-color:#13b59c;
+    color: #fff;
+
+}
+
+.btn.buy-now-btn-2:hover {
+    background-color:#13b59c;
+    color: #fff; 
+}
+.text-purple{color:#7272fc;}
+
+/* ======================== */
+
+.question-box {
+    margin-bottom: 10px;
+}
+.faq-list .faq-list-header {
+    display: flex;
+    cursor: pointer;
+}
+
+
+.faq-list .faq-list-header i {
+    font-size: 20px;
+    margin-right: 15px;
+    color:#13b59c;
+}
+
+.faq-list .card-body p {
+    margin-left: 15px !important;
+}
+
+.faq-list .show .benefits-box-p {
+    font-size: 14px;
+    color: #13B59C;
+}
+.faq-list .card-body {
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+.faq-list-header h4{    
+    color: #1C1C1C ;
+    font-size: 18px;
+    margin-bottom: 0px;
+}
+
+.faq-list .faq-list-header h4:hover{
+    color: #1C1C1C !important;   
+}
+
+.panel-heading.active {
+    background-color: green;
+}
+.sub-menu-2 {
+    position: absolute;
+    left: 140px;
+    width: 120px;
+    top: 7px;
+    display: none;
+    background-color: #fff;
+}
+.dropdown-item:hover .sub-menu-2{
+  display: block;
+}
+.sole-table td:nth-child(4){background-color:#f3fbfa}
+
+
+
+/*----------Responsive Css Start----------*/
+.modal-lg, .modal-xl {
+    max-width: 710px;
+}
+
+@media only screen and (max-width :1199px) {}
+
+@media only screen and (min-width: 993px) and (max-width :1366px) {}
+@media only screen and (min-width: 993px) and (max-width :1199px) {  }
+
+@media only screen and (min-width: 768px) and (max-width :992px) {
+
+  
+}
+
+@media only screen and (max-width: 767px) {
+
+   
+    .service-banner-form {
+        background-color: #fff;
+        padding: 30px 30px;
+    }
+    .service-banner-text-1 {
+        margin-top: 0px;
+    }
+    .serviece-title-2 {      
+        font-size: 26px;
+    }
+
+    .benefits-box {
+        margin-bottom: 30px;
+    }
+    .pay-grow-box {       
+        margin-bottom: 30px;
+    }
+
+    .half-square{
+        display: none;
+    }
+    .half-circul {
+        display: none;
+    }
+
+}
+
+@media only screen and (min-width: 481px) and (max-width: 767px) {}
+
+@media only screen and (max-width: 480px) {
+
+    .serviece-title-2 {      
+        font-size: 22px;
+    }
+    .faq-list-header h4 {      
+        font-size: 16px;
+    }
+   
+
+}
+
+
+
+

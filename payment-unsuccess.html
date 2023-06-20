@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BizSetupGlobal </title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"
+          href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon"> -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+</head>
+
+<body>
+    <div class="navigation-wrap bg-light start-header start-style">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav id="header-1" class="navbar navbar-expand-lg navbar-light ">
+                        <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt=""></a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <div class="ml-auto search-login-reg-box">
+                                <!-- <div id="Search-icon" class="search-box pl-4 pl-md-0 ml-0 ml-md-4">
+                                    <a href="#"><i class="fa fa-search"></i></a>
+
+                                </div> -->
+                                <div class="pl-4 pl-md-0 ml-0 ml-md-4">
+                                    <img src="img/Group 8654.png">
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <form id="Search-box-hide" class="search-box-show">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 offset-md-2">
+                        <button id="Search-hide" class="search-hide-btn"> X </button>
+                        <div class="search-iput">
+                            <input type="text" class="" placeholder="Type here to search..." />
+                            <button type="button" class="btn search-iput-btn">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="payment-success-scn">
+        <div class="container text-center d-flex justify-content-center">
+            <div class="position-relative">
+                <img src="img/group-12616.png" class="img-fluid payment-unsuccess-bg-img">
+                <div class="payment-unsuccess-div">
+                    <h3 class="payment-unsuccess-title mt-4">
+                        Oh No!<br> Something Went Wrong.
+                    </h3>
+                    <div class="mt-3 mb-5">
+                        <p class="payment-success-text">
+                            We aren’t able to process your <br>payment. Please try again.
+                        </p>
+                    </div>
+                    <div class="d-flex justify-content-center pb-5">
+                        <div class="back-to-home mr-3">
+                            <a class="back-to-home-btn" href="index.html">Back To Home Page</a>
+                        </div>
+                        <!-- <div class="back-to-home">
+                            <a class="back-to-home-btn" href="index.html">Back To Home Page</a>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js "></script>
+    <script>
+        $(document).ready(function () {
+            $("#Search-hide").click(function () {
+                $("#Search-box-hide").toggle();
+            });
+        });
+
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            //Add a minus icon to the collapse element that is open by default
+            $('.collapse.show').each(function () {
+                $(this).parent().find(".fa").removeClass("fa-plus-square").addClass("fa-minus-square");
+            });
+
+            //Toggle plus/minus icon on show/hide of collapse element
+            $('.collapse').on('shown.bs.collapse', function () {
+                $(this).parent().find(".fa").removeClass("fa-plus-square").addClass("fa-minus-square");
+            }).on('hidden.bs.collapse', function () {
+                $(this).parent().find(".fa").removeClass("fa-minus-square").addClass("fa-plus-square");
+            });
+        });
+
+    </script>
+
+
+
+</body>
+
+
+</html>

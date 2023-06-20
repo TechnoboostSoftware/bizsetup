@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Redirecting</title>
+</head>
+
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.4/dist/sweetalert2.all.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            let url = new URL(window.location.href);
+            let token = url.searchParams.get("token");
+            if(token === null){
+                let error = url.searchParams.get("error");
+                let timerInterval;                
+                Swal.fire({
+                      icon: 'error',
+                      title: 'Oops',
+                      html: error,
+                      timer: 2000,
+                      timerProgressBar: true,
+                      didOpen: () => {
+                        Swal.showLoading() 
+                      },
+                      willClose: () => {
+                        clearInterval(timerInterval)
+                      }
+                    }).then((result) => {
+                    if (result.dismiss === Swal.DismissReason.timer) {
+                        window.location.href = "https://bizsetupglobal.com";
+                    }
+                });
+            } else {
+                console.log(token);
+                if (window.localStorage.getItem("amount") === null) {
+                    let timerInterval;
+                    Swal.fire({
+                      title: 'Please login through dashboard',
+                      html: 'Redirecting to dashboard website',
+                      timer: 2000,
+                      timerProgressBar: true,
+                      didOpen: () => {
+                        Swal.showLoading() 
+                      },
+                      willClose: () => {
+                        clearInterval(timerInterval)
+                      }
+                    }).then((result) => {
+                      if (result.dismiss === Swal.DismissReason.timer) {                            
+                        window.location.href = "https://dashboard.bizsetupglobal.com";
+                      }
+                    })
+                } else {                         
+                    let amount = window.localStorage.getItem('amount');
+                    let serviceCode = window.localStorage.getItem('serviceCode');
+                    let getLinkRequest = {
+                        url: "https://api.bizsetupglobal.com/api/pg/link?amount=" + amount + "&serviceCode=" + serviceCode,
+                        type: "GET",
+                        crossDomain: true,
+                        headers: {
+                            "authorization": "Bearer " + token
+                        }
+                    }
+                    $.ajax(getLinkRequest).done(function (response) {
+                        window.localStorage.clear();
+                        let timerInterval;
+                        Swal.fire({
+                          title: 'Login Completed!',
+                          html: 'Redirecting to payment page',
+                          timer: 3000,
+                          timerProgressBar: true,
+                          didOpen: () => {
+                            Swal.showLoading() 
+                          },
+                          willClose: () => {
+                            clearInterval(timerInterval)
+                          }
+                        }).then((result) => {
+                          if (result.dismiss === Swal.DismissReason.timer) {
+                            window.location.href = response;
+                          }
+                        })                          
+                    });   
+                }                    
+            }
+        });
+    </script>
+</body>
+
+</html>
