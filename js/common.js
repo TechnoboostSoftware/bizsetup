@@ -6,17 +6,35 @@ $(function(){
         console.log(mobRegex.test($('#mobile').val().trim()))
         if (emailRegex.test($('#email').val().trim()) && mobRegex.test($('#mobile').val().trim()) &&  $('#city').val().trim() != "") {
         
+            var fullName = $('#name').val();
+            if(fullName!=undefined){
+                fullName = $('#name').val().trim()
+            }else{
+                fullName=""
+            }
+
+            var serviceName = $('#lookingFor').val();
+            if(serviceName!=undefined){
+                serviceName = $('#lookingFor').val().trim()
+            }else{
+                serviceName=""
+            }
            
     
             var data = {
                 "city": $('#city').val().trim(),
                 "email": $('#email').val().trim(),
                 "mobile": $('#mobile').val().trim(),
-                "fullName": $('#name').val().trim(),
-                "serviceName": $('#lookingFor').val().trim()
+                "fullName": fullName,
+                "serviceName": serviceName
             }
     
-            var emailBodyContent='<b>Name :</b> '+data.fullName+'<br> <b>Email :</b> '+data.mobile+'<br> <b>Mobile : </b> '+data.mobile+'<br><b>City: </b>'+data.city+'<br><b>Description:</b>'+data.serviceName || 'NA'
+            var emailBodyContent='<b>Name :</b> '+data.fullName+'<br> ';
+                emailBodyContent+='<b>Email :</b> '+data.mobile+'<br> ';
+                emailBodyContent+='<b>Mobile : </b> '+data.mobile+'<br>';
+                emailBodyContent+='<b>City: </b>'+data.city+'<br>';
+                emailBodyContent+='<b>Description:</b>'+data.serviceName || 'NA<br>';
+                emailBodyContent+='<b>Requested from : '+window.location.pathname
     
             var jsondata={
                 "token": "uqx51lvs89",
