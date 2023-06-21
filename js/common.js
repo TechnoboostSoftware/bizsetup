@@ -32,6 +32,10 @@ $(function(){
                 success: function(result){
                     if(result.hasOwnProperty('status') && result.status=='NOT_FOUND' ){
                         $('.testnot').replaceWith('<div class="alert alert-success alert-dismissible fade show" role="alert"> Something went wrong ! Try again <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button> </div>');
+                        //reset();
+                    }else{
+                        window.location.href="thankyou.html"
+                        // $('.testnot').replaceWith('<div class="alert alert-success alert-dismissible fade show" role="alert"> Something went wrong ! Try again <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button> </div>');
                         reset();
                     }
                    
